@@ -1,0 +1,95 @@
+body {
+    background-color: #C8A2D6; 
+    font-family: Arial, sans-serif; 
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+}
+
+/* Center the form within the page */
+form {
+    background-color: white; 
+    padding: 30px;
+    border-radius: 10px; 
+    width: 80%; 
+    max-width: 600px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+/* Style the headings */
+h1, h2, h4 {
+    text-align: left;
+    color: #4A2C9D; /* A deeper shade of purple */
+    margin-bottom: 20px;
+}
+
+/* Underline the headings */
+h1 u, h2 u, h4 u {
+    text-decoration: underline;
+}
+
+/* Style for the form fields (input, select) */
+input[type="text"],
+input[type="password"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #D1B2E2; /* Light purple border */
+    border-radius: 5px; /* Rounded corners */
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+/* Add some focus effect on form fields */
+input[type="text"]:focus,
+input[type="password"]:focus,
+select:focus {
+    border-color: #9B6EE1; /* A darker purple when focused */
+    outline: none;
+}
+
+/* Style for the labels */
+h4 {
+    color: #4A2C9D;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+
+/* Center the "PAY NOW" button */
+.center-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Style the submit button */
+input[type="submit"] {
+    background-color: #9B6EE1; /* Purple background */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for the submit button */
+input[type="submit"]:hover {
+    background-color: #7A4DBF; /* Darker purple when hovered */
+}
+
+/* Additional styles for form spacing and responsiveness */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input, form select {
+    margin-top: 10px; /* Space between form elements */
+}
