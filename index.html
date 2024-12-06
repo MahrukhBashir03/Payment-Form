@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form onsubmit="return validateForm(event);">
+        <h1><center><u>PAYMENT FORM</u></center></h1>
+
+      <h2><b><u>CONTACT INFORMATION</b></u></h2>
+      <h4>NAME:</h4>
+      <input type="text" name="username" style="width: 600px;" required>
+        <h4>GENDER:</h4>
+        <label for ="10">
+        <input type = "radio" name = "gender" value = "Male" id="10">Male 
+        </label>
+        <label for = "20">
+        <input type = "radio" name = "gender" value = "Female" id="20">Female
+        </label><br>
+
+        <h4>ADDRESS:</h4>
+        <input type = "text" name=" address" style="width: 600px; height: 50px;">
+
+        <h4>EMAIL:</h4>
+        <input type="text" name="email" style="width: 600px;" required>
+
+
+        <h2><b>Payment Information</b></h2>
+
+        <label for="cardType">CARD TYPE:</label><br>
+        <select id="cardType" required>
+            <option value="Visa">Visa</option>
+            <option value="MasterCard">MasterCard</option>
+            <option value="UnionPay">UnionPay</option>
+        </select><br><br>
+        <h4>CARD NUMBER:</h4>
+        <input type="text" name="card number" style="width: 600px;" required>
+         
+        <form onsubmit="return validateForm(event);">
+        <h4>EXPIRATION DATE:</h4>
+        <div class="form-row">
+        <select name="MONTH" style="width: 100px;" required>
+            <option value="January">January</option>
+            <option value="February">February</option>
+            <option value="March">March</option>
+            <option value="April">April</option>
+            <option value="May">May</option>
+            <option value="June">June</option>
+            <option value="July">July</option>
+            <option value="August">August</option>
+            <option value="September">September</option>
+            <option value="October">October</option>
+            <option value="November">November</option>
+            <option value="December">December</option>
+        </select>
+
+        <select name="DATE" style="width: 100px;" required>
+            <option value="01">01</option>
+            <option value="02">02</option>
+            <option value="03">03</option>
+            <option value="04">04</option>
+            <option value="05">05</option>
+            <option value="06">06</option>
+            <option value="07">07</option>
+            <option value="08">08</option>
+            <option value="09">09</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option> 
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+            <option value="21">21</option>
+            <option value="22">22</option>
+            <option value="23">23</option>
+            <option value="24">24</option>
+            <option value="25">25</option>
+            <option value="26">26</option>
+            <option value="27">27</option>
+            <option value="28">28</option>
+            <option value="29">29</option>
+            <option value="30">30</option>
+            <option value="31">31</option>
+        </select>
+    
+
+        <select name="YEAR" style="width: 100px;" required>
+            <option value="2024">2024</option>
+            <option value="2025">2025</option>
+            <option value="2026">2026</option>
+            <option value="2027">2027</option>
+            <option value="2028">2028</option>
+            <option value="2029">2029</option>
+            <option value="2030">2030</option>
+        </select>
+        </div>
+
+        <form onsubmit="return validateForm(event);">
+        <h4>PINCODE:</h4>
+        <input type="password" name="PINCODE" style="width: 600px;" pattern="\d{4}" maxlength="4" required>
+        <br>
+        <button type="submit"><b>PAY NOW</b></button>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
