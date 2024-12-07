@@ -1,5 +1,7 @@
 function validateForm(event) {
     event.preventDefault(); // Prevent the default form submission
+
+    // Get card type and card number
     const cardType = document.getElementById("cardType").value;
     const cardNumber = document.querySelector("input[name='card number']").value.trim();
 
@@ -16,6 +18,26 @@ function validateForm(event) {
         return false;
     }
 
+    // Validate the expiration date
+    const month = document.querySelector("select[name='MONTH']").value;
+    const date = parseInt(document.querySelector("select[name='DATE']").value, 10);
+    const year = parseInt(document.querySelector("select[name='YEAR']").value, 10);
+
+    // Get today's date
+    const today = new Date();
+    const currentYear = today.getFullYear();
+    const currentMonth = today.getMonth(); 
+    const currentDate = today.getDate();
+
+    // Construct the selected expiration date
+    const selectedDate = new Date(year, new Date(Date.parse(month + " 1")).getMonth(), date);
+
+    // Check if the selected expiration date is in the future
+    if (selectedDate <= today) {
+        alert("The card expiration date must be in the future. Please select a valid date.");
+        return false;
+    }
+
     alert("Payment successfully submitted!");
-    return true; // Submit the form if validation passes
+    return true; // Submit the form if all validations pass
 }
